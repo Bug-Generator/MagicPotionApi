@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.magicurology.MagicPotionApi.OrdersControllerSpec" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-13T03:08:05" hostname="NA-300123" time="1.231">
+<testsuite name="com.magicurology.MagicPotionApi.OrdersControllerSpec" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-10-13T06:53:53" hostname="NA-300123" time="0.368">
   <properties/>
-  <testcase name="create order - happy path" classname="com.magicurology.MagicPotionApi.OrdersControllerSpec" time="1.231"/>
-  <system-out><![CDATA[22:08:06.313 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 5 mappings in <unknown>
-22:08:06.546 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-22:08:06.580 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-22:08:06.607 [Test worker] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
-22:08:06.607 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
-22:08:06.609 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
-22:08:06.610 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
-22:08:06.610 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@361fe357
-22:08:06.610 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@42e47ccd
-22:08:06.610 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-22:08:06.610 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 3 ms
-22:08:06.675 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - POST "/api/magic", parameters={}
-22:08:06.678 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.magicurology.MagicPotionApi.controller.OrdersController#createOrder(OrderCreateRequest)
-22:08:06.711 [Test worker] WARN org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.magicurology.MagicPotionApi.model.OrderCreateResponse com.magicurology.MagicPotionApi.controller.OrdersController.createOrder(com.magicurology.MagicPotionApi.model.OrderCreateRequest)]
-22:08:06.711 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 400 BAD_REQUEST
+  <testcase name="create order - happy path" classname="com.magicurology.MagicPotionApi.OrdersControllerSpec" time="0.32"/>
+  <testcase name="get order - happy path" classname="com.magicurology.MagicPotionApi.OrdersControllerSpec" time="0.017"/>
+  <testcase name="get all orders - happy path" classname="com.magicurology.MagicPotionApi.OrdersControllerSpec" time="0.009"/>
+  <testcase name="update fulfillment - happy path" classname="com.magicurology.MagicPotionApi.OrdersControllerSpec" time="0.012"/>
+  <testcase name="delete order - happy path" classname="com.magicurology.MagicPotionApi.OrdersControllerSpec" time="0.009"/>
+  <system-out><![CDATA[2020-10-13 01:53:53.997  INFO 65107 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2020-10-13 01:53:53.997  INFO 65107 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-13 01:53:53.997  INFO 65107 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2020-10-13 01:53:54.063  WARN 65107 --- [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.magicurology.MagicPotionApi.model.OrderCreateResponse com.magicurology.MagicPotionApi.controller.OrdersController.createOrder(com.magicurology.MagicPotionApi.model.OrderCreateRequest)]
+2020-10-13 01:53:54.079  INFO 65107 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2020-10-13 01:53:54.080  INFO 65107 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-13 01:53:54.080  INFO 65107 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2020-10-13 01:53:54.094  INFO 65107 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2020-10-13 01:53:54.094  INFO 65107 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-13 01:53:54.094  INFO 65107 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2020-10-13 01:53:54.103  INFO 65107 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2020-10-13 01:53:54.103  INFO 65107 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-13 01:53:54.103  INFO 65107 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2020-10-13 01:53:54.107  WARN 65107 --- [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.String> com.magicurology.MagicPotionApi.controller.OrdersController.updateFulfillment(com.magicurology.MagicPotionApi.model.FulfillmentRequest)]
+2020-10-13 01:53:54.115  INFO 65107 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2020-10-13 01:53:54.115  INFO 65107 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-13 01:53:54.116  INFO 65107 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
