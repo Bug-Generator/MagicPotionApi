@@ -22,7 +22,7 @@ com/magicurology/MagicPotionApi/model/CreditCardInfo.java
  com.magicurology.MagicPotionApi.model.CreditCardInfo
 com/magicurology/MagicPotionApi/model/OrderCreateResponse.java
  com.magicurology.MagicPotionApi.model.OrderCreateResponse
-com/magicurology/MagicPotionApi/controller/OrdersController.java
- com.magicurology.MagicPotionApi.controller.OrdersController
 com/magicurology/MagicPotionApi/service/OrderService.java
  com.magicurology.MagicPotionApi.service.OrderService
+com/magicurology/MagicPotionApi/controller/OrdersController.java
+ com.magicurology.MagicPotionApi.controller.OrdersController

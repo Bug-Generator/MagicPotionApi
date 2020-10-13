@@ -25,8 +25,11 @@ import java.util.List;
 @RequestMapping("/api/magic")
 public class OrdersController {
 
-    @Autowired
     private OrderService orderService;
+
+    public OrdersController(OrderService orderService) {
+        this.orderService = orderService;
+    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
