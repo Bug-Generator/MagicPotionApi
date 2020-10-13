@@ -1,6 +1,7 @@
 package com.magicurology.MagicPotionApi.controller;
 
 import com.magicurology.MagicPotionApi.model.FulfillmentRequest;
+import com.magicurology.MagicPotionApi.model.Order;
 import com.magicurology.MagicPotionApi.model.OrderResponse;
 import com.magicurology.MagicPotionApi.model.OrderCreateResponse;
 import com.magicurology.MagicPotionApi.model.OrderCreateRequest;
@@ -18,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/magic")
 public class OrdersController {
@@ -34,6 +37,11 @@ public class OrdersController {
     @GetMapping("/{uid}")
     public OrderResponse getOrder(@PathVariable("uid") String uid) {
         return orderService.getOrder(uid);
+    }
+
+    @GetMapping
+    public List<Order> getAllOrders() {
+        return orderService.getAllOrders();
     }
 
     @PatchMapping

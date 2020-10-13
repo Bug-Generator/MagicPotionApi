@@ -1,5 +1,7 @@
 package com.magicurology.MagicPotionApi.service;
 
+import ch.qos.logback.core.util.COWArrayList;
+import com.fasterxml.jackson.databind.deser.std.ArrayBlockingQueueDeserializer;
 import com.magicurology.MagicPotionApi.exception.BadRequestException;
 import com.magicurology.MagicPotionApi.exception.NotFoundException;
 import com.magicurology.MagicPotionApi.model.Address;
@@ -15,8 +17,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class OrderService {
@@ -68,6 +72,12 @@ public class OrderService {
         return order.toOrderResponse();
     }
 
+    public List<Order> getAllOrders() {
+        LOGGER.info("message=getting all order from db");
+        // Get order from db else throw exception with lambda
+        return ordersRepo.findAll();
+    }
+
     public ResponseEntity<String> updateOrder(FulfillmentRequest fulfillmentRequest) {
         // use get method to verify that order exists
         // method will throw exception if not
@@ -105,7 +115,7 @@ public class OrderService {
 
 
 
-    private final String USER_EXISTS = "An oder with the same name at this address already exists";
+    private final String USER_EXISTS = "An order with the same name at this address already exists";
     private final String BAD_QUANTITY = "Quantity cannot exceed 3 for a given month";
     private final String INVALID_QUANTITY = "Invalid quantity provided";
     private final String INVALID_ORDER = "Invalid order provided";
