@@ -1,2 +1,0 @@
-com/magicurology/MagicPotionApi/MagicPotionApiApplicationTests.java
- com.magicurology.MagicPotionApi.MagicPotionApiApplicationTests
